@@ -28,6 +28,19 @@ exampleRow.innerHTML = `
   </td>
 `;
 
+const deleteButton = exampleRow.querySelector(".btn-delete");
+  const likeButton = exampleRow.querySelector(".btn-like");
+
+  deleteButton.addEventListener("click", () => {
+   exampleRow.remove();
+  });
+
+  likeButton.addEventListener("click", (element) => {
+    const btn = element.currentTarget;
+    btn.classList.toggle("selected")
+  });
+
+
 tableBody.appendChild(exampleRow);
 
 
